@@ -1,0 +1,48 @@
+.main-header {
+    margin-bottom: var(--spacing-large);
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    font-size: var(--font-size-normal);
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: var(--link-hover-color);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--link-hover-color);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.main-nav a.active {
+    color: var(--highlight-color);
+}
+
+.main-nav a.active::after {
+    width: 100%;
+    background-color: var(--highlight-color);
+}

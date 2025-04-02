@@ -1,0 +1,8 @@
+.main-footer {
+    text-align: center;
+    margin-top: var(--spacing-xlarge);
+    padding-top: var(--spacing-medium);
+    border-top: 1px solid var(--divider-color);
+    font-size: var(--font-size-small);
+    color: #999;
+}

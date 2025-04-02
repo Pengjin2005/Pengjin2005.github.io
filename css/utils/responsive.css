@@ -1,0 +1,38 @@
+/* 移动设备 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        margin-bottom: 20px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav li {
+        margin: 5px 0;
+    }
+}
+
+/* 平板设备 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+/* 大屏幕设备 */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 960px;
+    }
+}

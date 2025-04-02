@@ -1,0 +1,42 @@
+.content-section {
+    margin-bottom: var(--spacing-xlarge);
+}
+
+.content-section h2 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-medium);
+    color: var(--text-color);
+}
+
+.content-section p {
+    margin-bottom: var(--spacing-medium);
+    text-align: justify;
+}
+
+.highlight-link {
+    color: var(--highlight-color);
+    font-weight: 500;
+}
+
+.research-links {
+    display: flex;
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-large);
+}
+
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: rgba(111, 191, 255, 0.1);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: rgba(111, 191, 255, 0.2);
+}
+
+.btn-link .icon {
+    margin-right: 8px;
+}

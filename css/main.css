@@ -1,0 +1,44 @@
+/* 导入所有CSS组件 */
+@import 'utils/variables.css';
+@import 'utils/responsive.css';
+@import 'components/header.css';
+@import 'components/profile.css';
+@import 'components/sections.css';
+@import 'components/footer.css';
+
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--divider-color);
+    margin: 30px 0;
+}
