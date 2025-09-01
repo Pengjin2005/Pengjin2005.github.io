@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的Reveal.js演示文稿</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/moon.min.css" id="theme">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/monokai.min.css">
+    <style>
+        .reveal section img {
+            border: none;
+            box-shadow: none;
+            background: none;
+        }
+
+        .custom-title {
+            font-size: 2.5em;
+            color: #f5f5f5;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .reveal .progress {
+            height: 10px;
+        }
+
+        .reveal .controls {
+            color: #42affa;
+        }
+
+        .highlight {
+            color: #42affa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- 封面幻灯片 -->
+            <section>
+                <h1 class="custom-title">项目展示</h1>
+                <h3>使用Reveal.js创建的演示文稿</h3>
+                <p>
+                    <small>制作人： <span class="highlight">您的名字</span></small>
+                </p>
+            </section>
+
+            <!-- 介绍幻灯片 -->
+            <section>
+                <h2>关于本项目</h2>
+                <ul>
+                    <li class="fragment fade-in">基于Reveal.js框架</li>
+                    <li class="fragment fade-in">托管在GitHub Pages上</li>
+                    <li class="fragment fade-in">支持响应式设计</li>
+                    <li class="fragment fade-in">易于自定义和扩展</li>
+                </ul>
+            </section>
+
+            <!-- 垂直幻灯片示例 -->
+            <section>
+                <section>
+                    <h2>垂直幻灯片</h2>
+                    <p>按向下箭头查看更多内容</p>
+                    <p>↓</p>
+                </section>
+                <section>
+                    <h3>子幻灯片 1</h3>
+                    <p>这是垂直方向的第一个子幻灯片</p>
+                </section>
+                <section>
+                    <h3>子幻灯片 2</h3>
+                    <p>这是垂直方向的第二个子幻灯片</p>
+                </section>
+            </section>
+
+            <!-- 代码示例幻灯片 -->
+            <section>
+                <h2>代码示例</h2>
+                <pre><code class="hljs javascript">
+// JavaScript代码示例
+function showMessage(message) {
+    console.log('Message: ' + message);
+    return {
+        text: message,
+        timestamp: new Date()
+    };
+}
+
+// 调用函数
+const result = showMessage('Hello, Reveal.js!');
+                </code></pre>
+                <p class="fragment">代码高亮功能由highlight.js提供</p>
+            </section>
+
+            <!-- 图表幻灯片 -->
+            <section>
+                <h2>图表展示</h2>
+                <div class="chart-container" style="height: 400px; width: 80%; margin: 0 auto;">
+                    <svg viewBox="0 0 800 400">
+                        <!-- 坐标轴 -->
+                        <line x1="50" y1="350" x2="750" y2="350" stroke="#888" stroke-width="2"></line>
+                        <line x1="50" y1="50" x2="50" y2="350" stroke="#888" stroke-width="2"></line>
+
+                        <!-- 柱状图 -->
+                        <rect x="100" y="150" width="60" height="200" fill="#42affa" class="fragment fade-in"></rect>
+                        <rect x="200" y="100" width="60" height="250" fill="#a6e22e" class="fragment fade-in"></rect>
+                        <rect x="300" y="200" width="60" height="150" fill="#fd971f" class="fragment fade-in"></rect>
+                        <rect x="400" y="120" width="60" height="230" fill="#e6db74" class="fragment fade-in"></rect>
+                        <rect x="500" y="80" width="60" height="270" fill="#ae81ff" class="fragment fade-in"></rect>
+
+                        <!-- 标签 -->
+                        <text x="130" y="370" text-anchor="middle" fill="#888">项目A</text>
+                        <text x="230" y="370" text-anchor="middle" fill="#888">项目B</text>
+                        <text x="330" y="370" text-anchor="middle" fill="#888">项目C</text>
+                        <text x="430" y="370" text-anchor="middle" fill="#888">项目D</text>
+                        <text x="530" y="370" text-anchor="middle" fill="#888">项目E</text>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- 图像幻灯片 -->
+            <section>
+                <h2>图像展示</h2>
+                <div class="r-stack">
+                    <img src="/api/placeholder/400/300" alt="placeholder" class="fragment fade-out"
+                        data-fragment-index="0">
+                    <img src="/api/placeholder/450/300" alt="placeholder" class="fragment current-visible"
+                        data-fragment-index="0">
+                    <img src="/api/placeholder/400/320" alt="placeholder" class="fragment">
+                </div>
+                <p class="fragment">图像切换效果</p>
+            </section>
+
+            <!-- Markdown幻灯片 -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Markdown 支持
+                    
+                    使用 Markdown 可以快速创建幻灯片
+                    
+                    - 项目列表 1
+                    - 项目列表 2
+                    - 项目列表 3
+                    
+                    ---
+                    
+                    ## 表格示例
+                    
+                    | 姓名 | 年龄 | 职业 |
+                    |------|------|------|
+                    | 张三 | 28   | 开发者 |
+                    | 李四 | 32   | 设计师 |
+                    | 王五 | 24   | 产品经理 |
+                </textarea>
+            </section>
+
+            <!-- 引用幻灯片 -->
+            <section>
+                <h2>引用示例</h2>
+                <blockquote>
+                    优秀的演示不仅仅是展示信息，更是讲述一个引人入胜的故事。
+                </blockquote>
+                <p>— 演示设计专家</p>
+            </section>
+
+            <!-- 结束幻灯片 -->
+            <section>
+                <h1>谢谢观看!</h1>
+                <p>项目地址：<a
+                        href="https://github.com/yourusername/your-presentation">github.com/yourusername/your-presentation</a>
+                </p>
+                <p><small>使用 <a href="https://revealjs.com">reveal.js</a> 制作</small></p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/zoom/zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/search/search.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/highlight.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide',
+            plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
